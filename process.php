@@ -17,7 +17,7 @@
         $params=array($ID);
         //echo "<script type='text/javascript'>alert('$ID');</script>";
         //$sqlVi="EXEC STOR_SL ID=? ";
-        $sqlVi="SELECT * FROM tb_hubspot_wt ID=?";
+        $sqlVi="SELECT * FROM tb_hubspot_wt WHERE ID=?";
           if( $stmt=sqlsrv_query($conn,$sqlVi,$params)) {
               $row=sqlsvr_fetch_array($stmt);
               return $row;
