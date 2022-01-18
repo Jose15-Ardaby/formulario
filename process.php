@@ -1,11 +1,17 @@
 <?php
     include ('conexion.php');
     
-    //$params=array($ID);
-
-    /*if(isset($_POST['nuevo'])){
-        $sqlIn="EXEC STOR_IN ";
-    }*/
+    $nombre='';
+    $apellido='';
+    $perfil='';
+    $propietario='';
+    $numero='';
+    $horario='';
+    $correo='';
+    $tipo_lead='';
+    $estado_lead='';
+    $notas='';
+    $whats='';
     
     if(isset($_GET['guardar'])){
         

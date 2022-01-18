@@ -1,21 +1,22 @@
 <?php include ('process.php'); ?>
 <?php
-/*if(isset($_GET['buscar'])){
+if(isset($_GET['buscar'])){
   $id=$_GET['id'];
-  //$params=array($id);
-  //$sqlVi="EXEC STOR_SL ID=? ";
-  $sqlVi="SELECT * FROM tb_contactos WHERE ID=$id";
-  $stmt=sqlsrv_query($conn,$sqlVi)
+  $sqlVi="SELECT * FROM tb_contactos WHERE Contant_Id=$id";
+  $stmt=sqlsrv_query($conn,$sqlVi);
     if(sqlsrv_num_rows($stmt)==1){
         $row=sqlsvr_fetch_array($stmt);
+        $nombre=$row['Nombre'];
       }
-}*/
+}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="./css/styles.css">
+<link rel="icon" href="./css/favicon.ico">
 </head>
+<title>Ardaby Service</title>
 <form method="get">
 <ul>
   <li>
@@ -31,7 +32,7 @@
     <tr>
   <th>
     <label for="name">Nombre:</label>
-    <input type="text" name="nombre">
+    <input type="text" name="nombre" value="<?php echo $nombre; ?>">
   </th>
   <th>
     <label for="mail">Apellido:</label>
