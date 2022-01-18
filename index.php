@@ -1,21 +1,37 @@
+<?php include ('process.php'); ?>
 <?php
-include ('process.php'); ?>
-<link href="/css/style.css" rel="stylesheet" type="text/css">
-<form action="./process.php" method="get">
+/*if(isset($_GET['buscar'])){
+  $id=$_GET['id'];
+  //$params=array($id);
+  //$sqlVi="EXEC STOR_SL ID=? ";
+  $sqlVi="SELECT * FROM tb_contactos WHERE ID=$id";
+  $stmt=sqlsrv_query($conn,$sqlVi)
+    if(sqlsrv_num_rows($stmt)==1){
+        $row=sqlsvr_fetch_array($stmt);
+      }
+}*/
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<form method="get">
 <ul>
   <li>
     <label for="name">Buscar:</label>
     <input type="text" id="identi" name="id">
-    <input type="submit" class="btn" name="buscar" value="Buscar">
+    <input type="hidden" name="buscar" value="#">
+    <button class="btn" type="submit">Buscar</button>
   </li></ul>
 </form>
 
-<form action="/my-handling-form-page" method="post">
+<form action="./process.php" method="post">
   <table>
     <tr>
   <th>
     <label for="name">Nombre:</label>
-    <input type="text" name="nombre" value="<?php echo $row['Nombre']; ?>">
+    <input type="text" name="nombre">
   </th>
   <th>
     <label for="mail">Apellido:</label>
@@ -99,8 +115,9 @@ include ('process.php'); ?>
   <th>
     <label for="mail">Fecha de creación:</label>
     <input type="text"  name="fecha_creacion">
-    <input type="submit" class="btn" name="Guardar" value="Guardar">
 </th>
+<th><input type="submit" class="edit_btn" name="Guardar" value="Guardar"></th>
 </tr>
- 
-</table></form>
+ </table>
+</form>
+</html>
