@@ -2,6 +2,7 @@
 <?php
 if(isset($_GET['buscar'])){
   $id=$_GET['id'];
+  $update=true;
   $sqlVi="SELECT * FROM tb_contactos WHERE Contant_Id=$id";
   $stmt=sqlsrv_query($conn,$sqlVi);
     if(sqlsrv_num_rows($stmt)==1){
@@ -21,7 +22,7 @@ if(isset($_GET['buscar'])){
 <ul>
   <li>
     <label for="name">Buscar:</label>
-    <input type="text" id="identi" name="id">
+    <input type="text" id="identi" name="id" value='<?php echo $id; ?>'>
     <input type="hidden" name="buscar" value="#">
     <button class="btn" type="submit">Buscar</button>
   </li></ul>
@@ -36,7 +37,7 @@ if(isset($_GET['buscar'])){
   </th>
   <th>
     <label for="mail">Apellido:</label>
-    <input type="text"  name="apellido">
+    <input type="text"  name="apellido" value="<?php echo $apellido; ?>">
   </th>
   <th>
     <label for="msg">Perfil:</label>
@@ -117,7 +118,14 @@ if(isset($_GET['buscar'])){
     <label for="mail">Fecha de creación:</label>
     <input type="text"  name="fecha_creacion">
 </th>
-<th><input type="submit" class="edit_btn" name="Guardar" value="Guardar"></th>
+<th>
+<div class="input-group">
+            <?php if($update==true): ?>
+            <button class="edit_btn" type="submit" name="update">Actualizar</button>
+            <?php else: ?>
+            <button class="edit_btn" type="submit" name="guardar">Guardar</button>
+            <?php endif ?>
+</div>
 </tr>
  </table>
 </form>
