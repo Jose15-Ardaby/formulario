@@ -10,10 +10,12 @@
 <form action="./process.php" method="post">
   <table>
     <tr>
-  <th>
+  <th class='input-group' colspan=3>
     <label for="name">Nombre Completo:</label>
     <input type="text" name="nombre" value="">
   </th>
+  </tr>
+  <tr>
   <th>
     <label for="ciudad">Ciudad:</label>
     <input type="text"  name="ciudad" value="">
@@ -26,7 +28,7 @@
 <tr>
   <th>
     <label for="codigo_p">Codigo Postal:</label>
-    <input type="text" name="codigo_p" placeholder='Ejem: example@gmail.com'>
+    <input type="text" name="codigo_p">
 </th>
   <th>
     <label for="colonia">Colonia:</label>
@@ -43,7 +45,7 @@
 </th>
   <th>
     <label for="correo">Correo electronico:</label>
-    <input type="mail"  name="correo">
+    <input type="mail"  name="correo" placeholder='Ejem: example@gmail.com'>
 </th>
   <th>
     <label for="t_examen">Tipo de examen:</label>
@@ -73,20 +75,19 @@
     <label for="campaña">Campaña:</label>
     <select name='campaña'>
         <option value=null selected>---------</option>
-        <option>Covid-19</option>
-        <option>Examen de sangre</option>
-        <option>Orina</option>
-        <option>Glucosa</option>
+        <option value='506'>ClickLab-Head Land</option>
     </select>
 </th>
 <th>
     <label for="agente">Agente:</label>
     <select name='agente'>
         <option value=null selected>---------</option>
-        <option>Covid-19</option>
-        <option>Examen de sangre</option>
-        <option>Orina</option>
-        <option>Glucosa</option>
+        <option>1000</option>
+        <option>1001</option>
+        <option>1002</option>
+        <option>1003</option>
+        <option>1004</option>
+        <option>1005</option>
     </select>
 </th>
 </tr>
