@@ -12,9 +12,12 @@ try {
     echo 'Falló la conexión: ' . $e->getMessage();
 }
 
-/*$sth = $conn->prepare('SELECT * FROM tb_contactos WHERE Contant_Id=?');
-$sth->execute();
-$row = $sth->fetchAll();
-var_dump($row);*/
-
+/*$sth = $conn->prepare('SELECT * FROM clicklb');
+              $sth->execute();
+              while($row = $sth->fetch(PDO::FETCH_ASSOC)){
+                foreach($row as $res){ ?>
+                <option><?php echo $res; ?></option>
+                <?php
+              }
+            }*/
 ?>

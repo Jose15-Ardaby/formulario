@@ -1,6 +1,8 @@
 body{
     font-size:  20px;
     font-family: "Century Gothic", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
 }
 table{
     width: 70%;
@@ -14,7 +16,7 @@ tr{
 }
 th, td{
     border: none;
-    height: 30px;
+    height: 90px;
     padding: 2px;
 }
 tr:hover{
@@ -28,6 +30,11 @@ form{
     padding: 20px;
     border: 1px solid #BBBBBB;
     border-radius: 6px;
+}
+.input{
+    width: 300px;
+    font-size: 20px;
+    padding: 5px;
 }
 
 .input-group{
@@ -69,6 +76,8 @@ form{
     border-radius: 3px;
     border: none;
     text-decoration: none;
+    margin: 0 auto;
+    display: block;
 }
 
 .del_btn{
